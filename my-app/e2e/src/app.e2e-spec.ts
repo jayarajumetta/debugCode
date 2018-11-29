@@ -2,6 +2,7 @@ import { AppPage } from './app.po';
 
 describe('workspace-project App', () => {
   let page: AppPage;
+  let expectedTitle;
 
   beforeEach(() => {
     page = new AppPage();
@@ -9,6 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to my-app!');
+    expectedTitle=page.getTitleText();
+    expect(page.getTitleText()).toEqual(expectedTitle);
   });
 });
